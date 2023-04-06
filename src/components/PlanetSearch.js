@@ -9,7 +9,7 @@ const PlanetSearch = () => {
   // Fetch and set data functions here
   const fetchPeople = async (planet, page) => {
     try {
-      const response = await axios.get(`https://swapi.dev/api/planets/?page=${page}`);
+      const response = await axios.get(`https://swapi.dev/api/people/?page=${page}`);
       const residents = response.data.results;
       setPeople(residents);
       setTotalPages(Math.ceil(response.data.count / 10));
