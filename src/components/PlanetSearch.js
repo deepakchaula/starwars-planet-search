@@ -25,6 +25,11 @@ const PlanetSearch = () => {
     fetchPeople(planet, 1);
   };
 
+  useEffect(()=>{
+    fetchPeople(planet, 1);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
+
 
   return (
     <div>
